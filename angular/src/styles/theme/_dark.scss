@@ -1,0 +1,22 @@
+@use "@angular/material" as mat;
+@use "palettes" as palettes;
+
+$dark-theme: mat.m2-define-dark-theme(
+	(
+		color: (
+			primary: palettes.$primary-palette,
+			accent: palettes.$accent-palette,
+			warn: palettes.$warn-palette,
+		),
+		typography: mat.m2-define-typography-config(),
+		density: -1,
+	)
+);
+
+// Density value	Result
+// 0	Default Material spacing
+// -1	Slightly compact
+// -2	Compact
+// -3	Very compact
+// 1	Slightly larger spacing
+// 2	Large spacing

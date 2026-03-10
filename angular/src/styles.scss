@@ -1,0 +1,22 @@
+@use "@angular/material" as mat;
+@use "theme/light" as light;
+@use "theme/dark" as dark;
+
+html,
+body {
+	height: 100%;
+	margin: 0;
+	font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+/* REQUIRED exactly once */
+@include mat.core();
+
+/* Theme classes */
+.light-theme {
+	@include mat.all-component-themes(light.$light-theme);
+}
+
+.dark-theme {
+	@include mat.all-component-themes(dark.$dark-theme);
+}
